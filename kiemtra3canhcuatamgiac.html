@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <table>
+            <input type="number" id="a" placeholder="Nhập a">
+            <input type="number" id="b" placeholder="Nhập b">
+            <input type="number" id="c" placeholder="Nhập c">
+            <button onclick="check()">check</button>
+            <h3>Kiểm tra 3 cạnh của tam giác</h3>
+            <div id="result">Hiện kết quả</div>
+        </table>
+        <script>
+            function check(){
+                let a= document.getElementById("a").value;
+                let b= document.getElementById("b").value;
+                let c= document.getElementById("c").value;
+
+                if( a > 0 && b > 0 && c >0 && a+ b > c && a + c> b && c + b> a)
+                { 
+                    document.getElementById("result").innerHTML= "đây là cạnh của tam giác"
+               
+            }else
+                document.getElementById("result").innerHTML= "đây không phải là cạnh của tam giác"
+        }
+        </script>
+    </table>
+</body>
+</html>
